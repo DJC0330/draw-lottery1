@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4a6fa5;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+h2 {
+    color: #4a6fa5;
+    margin: 20px 0 15px;
+    font-size: 20px;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+#itemInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+#addButton {
+    padding: 12px 20px;
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#addButton:hover {
+    background-color: #3a5a85;
+}
+
+.list-section {
+    margin-bottom: 25px;
+}
+
+#itemList {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#itemList li {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#itemList li:last-child {
+    border-bottom: none;
+}
+
+#itemList li .remove-item {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.draw-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.draw-options {
+    margin-bottom: 15px;
+    text-align: left;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.draw-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.draw-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#drawButton, #resetButton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+#drawButton {
+    background-color: #4a6fa5;
+    color: white;
+}
+
+#drawButton:hover {
+    background-color: #3a5a85;
+    transform: translateY(-2px);
+}
+
+#resetButton {
+    background-color: #6c757d;
+    color: white;
+}
+
+#resetButton:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.history-section {
+    margin-top: 30px;
+}
+
+#historyList {
+    list-style: none;
+    max-height: 120px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#historyList li {
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #666;
+}
+
+#historyList li:last-child {
+    border-bottom: none;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    #itemInput {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    #addButton {
+        border-radius: 5px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #drawButton, #resetButton {
+        width: 100%;
+        max-width: 200px;
+    }
+}
